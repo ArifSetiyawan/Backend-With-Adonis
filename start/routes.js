@@ -29,5 +29,11 @@ Route.group(() => {
   Route.post('reply', 'ReplyController.store')
   Route.delete('comment/:id', 'CommentController.delete')
   Route.delete('reply/:id', 'ReplyController.delete')
-}).prefix('meme/bootcamp')
+}).prefix('bootcamp')
+
+Route.group(() => {
+  Route.post('login', 'UserController.signin')
+  Route.post('register', 'UserController.signup')
+  Route.post('logout','UserController.logout')
+}).prefix('bootcamp/user')
 
